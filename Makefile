@@ -17,6 +17,6 @@ build-push: ## Build & Push
 	make build
 	make push
 
-push: ## Push the production image
+push: ## Push the Production image
 	docker tag prod-laravel-api-base-image:latest 636578990471.dkr.ecr.eu-west-2.amazonaws.com/prod-laravel-api-base-image:latest
 	docker push 636578990471.dkr.ecr.eu-west-2.amazonaws.com/prod-laravel-api-base-image:latest
