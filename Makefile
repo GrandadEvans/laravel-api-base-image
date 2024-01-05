@@ -11,12 +11,12 @@ help: ## Print help.
 auth: ## Authenticate with AWS
 	aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 636578990471.dkr.ecr.eu-west-2.amazonaws.com
 build: ## Build the production image
-	docker build -t prod-laravel-api-base-image .
+	docker build -t prod-website-base-image .
 
 build-push: ## Build & Push
 	make build
 	make push
 
 push: ## Push the Production Image
-	docker tag prod-laravel-api-base-image:latest 636578990471.dkr.ecr.eu-west-2.amazonaws.com/prod-laravel-api-base-image:latest
-	docker push 636578990471.dkr.ecr.eu-west-2.amazonaws.com/prod-laravel-api-base-image:latest
+	docker tag prod-website-base-image:latest 636578990471.dkr.ecr.eu-west-2.amazonaws.com/prod-website-base-image:latest
+	docker push 636578990471.dkr.ecr.eu-west-2.amazonaws.com/prod-website-base-image:latest
